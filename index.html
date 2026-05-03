@@ -111,11 +111,12 @@
         <label for="postName">Название поста:</label>
         <select id="postName">
             <option value="КПП-1">КПП-1</option>
+            <option value="КПП-1 (проходная)">КПП-1 (проходная)</option>
             <option value="КПП-2" selected>КПП-2</option>
-            <option value="КПП-3">КПП-3</option>
-            <option value="Дом Правительства">Дом Правительства</option>
-            <option value="Холл ФСО">Холл ФСО</option>
-            <option value="Вечный огонь">Вечный огонь</option>
+            <option value="КПП-2 (проходная)">КПП-2 (проходная)</option>
+            <option value="Штаб" selected>Штаб</option>
+            <option value="Дежурный врач">Дежурный врач</option>
+            <option value="Дежурный по КПП">Дежурный по КПП</option>
         </select>
     </div>
     
@@ -157,10 +158,7 @@
         Следующий отчет в: <span id="nextReportTime">--:--</span>
         <button id="reportSubmittedBtn">Отчет подан</button>
     </div>
-    
-    <div class="post-image">
-        <img src="posts.png" alt="Посты">
-    </div>
+
     
     <audio id="reminderSound" src="reminder.mp3" preload="auto"></audio>
     
@@ -392,9 +390,9 @@
             const currentTimeFormatted = formatTime(currentTime);
             
             // Создаем отчеты
-            const report1 = `Докладывает ${rank} ${name} | Пост ${postName} | Состав - ${composition} | Состояние стабильное | Заступил на пост, Время ${startTimeFormatted} | Доклад окончен`;
-            const report2 = `Докладывает ${rank} ${name} | Пост ${postName} | Состав - ${composition} | Состояние стабильное | Время на посту ${calculateTimeOnPost()} | Доклад окончен`;
-            const report3 = `Докладывает ${rank} ${name} | Пост ${postName} | Состав - ${composition} | Состояние стабильное | Сдал пост, Время ${currentTimeFormatted} | Доклад окончен`;
+            const report1 = `Докладывает ${rank} ${name} | Пост ${postName} | Состав - ${composition} | Код -  | Заступил на пост, Время ${startTimeFormatted} | Доклад окончен`;
+            const report2 = `Докладывает ${rank} ${name} | Пост ${postName} | Состав - ${composition} | Код - | Время на посту ${calculateTimeOnPost()} | Доклад окончен`;
+            const report3 = `Докладывает ${rank} ${name} | Пост ${postName} | Состав - ${composition} | Код - | Сдал пост, Время ${currentTimeFormatted} | Доклад окончен`;
             
             // Очищаем контейнер
             const container = document.getElementById('reportContainer');
