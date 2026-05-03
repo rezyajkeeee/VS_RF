@@ -194,7 +194,7 @@
                     
                     // Рассчитываем следующее время отчета
                     if (lastReportTime) {
-                        const nextReport = new Date(lastReportTime.getTime() + 15 * 60 * 1000);
+                        const nextReport = new Date(lastReportTime.getTime() + 20 * 60 * 1000);
                         nextReportTime = nextReport;
                         document.getElementById('nextReportTime').textContent = formatTime(nextReport);
                     }
