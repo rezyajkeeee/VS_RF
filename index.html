@@ -392,9 +392,11 @@
             const currentTimeFormatted = formatTime(currentTime);
             
             // Создаем отчеты
-            const report1 = `Докладывает ${rank} ${name} | Пост ${postName} | Состав - 1 ${composition} | Код - 1 | Заступил на пост | Доклад окончен`;
-            const report2 = `Докладывает ${rank} ${name} | Пост ${postName} | Состав - ${composition} | Код - | Время на посту ${calculateTimeOnPost()} | Доклад окончен`;
-            const report3 = `Докладывает ${rank} ${name} | Пост ${postName} | Состав - ${composition} | Код - | Сдал пост, Время ${currentTimeFormatted} | Доклад окончен`;
+            const report1 = `Докладывает ${rank} ${name} | Пост ${postName} заступил | Состав - ${composition} | Код - 1 | Доклад окончен`;
+            const report2 = `Докладывает ${rank} ${name} | Пост ${postName} | Минуты 20 | Состав - ${composition} | Код - 1 | Доклад окончен`;
+            const report3 = `Докладывает ${rank} ${name} | Пост ${postName} | Минуты 40 | Состав - ${composition} | Код - 1 | Доклад окончен`;
+            const report4 = `Докладывает ${rank} ${name} | Пост ${postName} | Минуты 60 | Состав - ${composition} | Код - 1 | Доклад окончен`;
+            const report5 = `Докладывает ${rank} ${name} | Пост ${postName} сдал | Состав - ${composition} | Код - 1 | Доклад окончен`;
             
             // Очищаем контейнер
             const container = document.getElementById('reportContainer');
